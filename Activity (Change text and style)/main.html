@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       }         
+
+       .all{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       .all p{
+        font-size: 32px;
+        font-family: fantasy;
+        color: blue;
+       }
+
+       .button_arrangement button{
+        font-size: 12px;
+        font-weight: bold;
+        height: 50px;
+        width: 150px;
+        border-radius: 25px;
+        background-color: lightgreen;
+       }
+
+       .button_arrangement button:hover{
+        background-color: green;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="all">
+        <p id="text">Original text!</p>
+        <div class="button_arrangement">
+            <button id="button" onclick="changetext()">Click to change text</button>
+            <button id="button" onclick="changestyle()">Click to change style</button>
+        </div>
+    </div>
+
+    <script>
+        function changetext(){
+            let t = document.getElementById("text");
+            if (t.innerHTML === "Original text!" ) {
+                t.innerHTML = "Text have change!"
+            }
+            else {
+                t.innerHTML = "Original text!"
+            }
+        }
+
+        function changestyle() {
+            let s = document.getElementById("text");
+            if (s.style.color === "blue") {
+                s.style.color = "red"
+            }
+            else {
+                s.style.color = "blue"
+            }
+        }
+    </script>
+
+</body>
+</html>
